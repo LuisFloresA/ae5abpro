@@ -1,3 +1,4 @@
+-- Trabajo Grupal 5 Módulo 3: Luis Flores | Daniel Ojeda | Iván Mieres
 -- ------------------PARTE 1--------------------
 
 CREATE USER 'usuarioTEST'@'localhost' IDENTIFIED BY 'sadkjlad4654';
