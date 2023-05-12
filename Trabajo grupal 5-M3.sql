@@ -55,13 +55,18 @@ INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `contraseña`, `zona_
 
 INSERT INTO `ingreso` (`id_ingreso`, `id_usuario`, `fechaHora_ingreso`) VALUES 
 (NULL, '1', current_timestamp()), 
-(NULL, '2', '2023-05-09 20:40:14'), 
-(NULL, '3', '2023-05-10 20:40:14'), 
-(NULL, '4', '2023-05-06 20:40:14'), 
-(NULL, '5', '2023-05-03 20:40:14'), 
-(NULL, '7', '2023-05-02 20:40:14'), 
-(NULL, '8', '2023-05-01 20:40:14'), 
+(NULL, '2', current_timestamp()), 
+(NULL, '3', current_timestamp()), 
+(NULL, '4', current_timestamp()), 
+(NULL, '5', current_timestamp()), 
+(NULL, '7', current_timestamp()), 
+(NULL, '8', current_timestamp()), 
 (NULL, '6', current_timestamp());
+
+
+-- ------------------PARTE 3--------------------
+-- Modificación de registros a UTC-2
+UPDATE `ingreso` SET `fechaHora_ingreso` = CONVERT_TZ(`fechaHora_ingreso`, '-03:00', '-02:00');
 
 
 -- ------------------PARTE 5--------------------
